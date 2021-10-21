@@ -16,6 +16,10 @@ import static Additional.Additional.*;
 
 @RestController
 public class SpringRestController {
+
+    public SpringRestController(){
+
+    }
     @Autowired
     CurrencyRequest currencyRequest;
     @Autowired
@@ -30,6 +34,8 @@ public class SpringRestController {
     private String mainPage;
     @Value("${baseCurr}")
     private String baseCurr;
+    @Value("${DateFormat}")
+    private String DateFormat;
 
     private ObjectMapper mapper;
     private StringReader reader;
@@ -37,6 +43,11 @@ public class SpringRestController {
     private SimpleDateFormat sdf;
     private String yesterday;
     private String today;
+
+    @RequestMapping("/index")
+    public String index() throws IOException {
+        return "index";
+    }
 
     @RequestMapping("/start")
     public String startPage() throws IOException {
@@ -54,7 +65,7 @@ public class SpringRestController {
        //здесь я для примера преобразовываю JSON в объект, с помощбю Jackson
         mapper = new ObjectMapper();//jackson
 
-        sdf = new SimpleDateFormat("yyyy-MM-dd");//форматирование даты
+        sdf = new SimpleDateFormat(DateFormat);//форматирование даты
         dateParam = new Date();//форматирование даты
         today = sdf.format(dateParam);//форматирование даты
         dateParam = DateUtils.addDays(new Date(), -1);//форматирование даты, предыдущий день

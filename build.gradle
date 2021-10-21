@@ -31,6 +31,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
     implementation 'ga.rugal:feign-client-generator:1.0.0'
     implementation 'de.bitgrip.archetypes:spring-boot-service:0.1.0'
+    implementation 'junit:junit:4.13.1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.4'
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.0'
