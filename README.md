@@ -21,4 +21,5 @@ server.port=8080 --порт<br/>
 java -jar curGIF-1.0-SNAPSHOT.jar
 # Сборка
 gradle build
-собирается файл build - libs
+собирается <br/>
+файл здесь build - libs<br/>
