@@ -3,6 +3,7 @@ package mainPackage;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+//фейгн-интерфейс для работы с api
 @FeignClient(url = "${curr.url}", name = "currClient")
 public interface CurrencyRequest {
 

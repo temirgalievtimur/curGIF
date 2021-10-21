@@ -13,7 +13,7 @@ import java.util.TreeMap;
 public class Additional {
 
     //метод получает два объекта-ответа по конкретной валюте и отвечает в
-    // HTML с полученной гифкой фиксированной величины, основываясь на полях полученного объекта
+    // HTML с полученной гифкой фиксированного размера, основываясь на полях полученного объекта
     public static String toHTMLResult(CurrencyModel yesterdayOBJ, String yesterday, CurrencyModel todayOBJ, String today, String curr, GiphyRequest giphyRequest, String apiKeyGif){
         StringBuilder sb = new StringBuilder();
         String tag = "rich";
