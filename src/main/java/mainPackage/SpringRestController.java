@@ -56,7 +56,7 @@ public class SpringRestController {
 
     @RequestMapping("/main")
     public String mainPage() throws IOException {
-        return toHTMLMain(JSONObjectToMap(new JSONObject(currencyRequest.listOfCurrencyes())), hostAppResult);
+        return toHTMLMain(JSONObjectToMap(new JSONObject(currencyRequest.listOfCurrencies())), hostAppResult);
     }
 
     @RequestMapping("/result")
